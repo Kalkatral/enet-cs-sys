@@ -1,0 +1,3 @@
+[submodule "vendor/ENet-CSharp"]
+	path = vendor/ENet-CSharp
+	url = https://github.com/nxrighthere/ENet-CSharp.git
