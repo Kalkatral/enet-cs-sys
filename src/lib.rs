@@ -4,6 +4,28 @@
 
 include! {concat!(env!("OUT_DIR"), "/bindings.rs")}
 
+pub const _ENetProtocolFlag_ENET_PROTOCOL_COMMAND_FLAG_ACKNOWLEDGE: u32 = 1 << 7;
+pub const _ENetProtocolFlag_ENET_PROTOCOL_COMMAND_FLAG_UNSEQUENCED: u32 = 1 << 6;
+pub const _ENetProtocolFlag_ENET_PROTOCOL_HEADER_FLAG_SENT_TIME: u32 = 1 << 14;
+pub const _ENetProtocolFlag_ENET_PROTOCOL_HEADER_FLAG_MASK: u32 =
+    _ENetProtocolFlag_ENET_PROTOCOL_HEADER_FLAG_SENT_TIME;
+pub const _ENetProtocolFlag_ENET_PROTOCOL_HEADER_SESSION_MASK: u32 = 3 << 12;
+pub const _ENetProtocolFlag_ENET_PROTOCOL_HEADER_SESSION_SHIFT: u32 = 12;
+
+pub const _ENetSocketWait_ENET_SOCKET_WAIT_NONE: u32 = 0;
+pub const _ENetSocketWait_ENET_SOCKET_WAIT_SEND: u32 = 1 << 0;
+pub const _ENetSocketWait_ENET_SOCKET_WAIT_RECEIVE: u32 = 1 << 1;
+pub const _ENetSocketWait_ENET_SOCKET_WAIT_INTERRUPT: u32 = 1 << 2;
+
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_NONE: u32 = 0;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_RELIABLE: u32 = 1 << 0;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_UNSEQUENCED: u32 = 1 << 1;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_NO_ALLOCATE: u32 = 1 << 2;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_UNRELIABLE_FRAGMENTED: u32 = 1 << 3;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_INSTANT: u32 = 1 << 4;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_UNTHROTTLED: u32 = 1 << 5;
+pub const _ENetPacketFlag_ENET_PACKET_FLAG_SENT: u32 = 1 << 8;
+
 #[cfg(test)]
 mod tests {
     use std::{ffi::CString, mem::MaybeUninit, time::Duration};

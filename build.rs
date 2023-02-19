@@ -16,6 +16,7 @@ fn main() {
         .header("wrapper.h")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .allowlist_function("enet_.*")
+        .allowlist_type("_ENet_.*")
         .generate()
         .expect("failed to generate bindings.");
 
