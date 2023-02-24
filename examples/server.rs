@@ -59,6 +59,7 @@ fn main() {
                         unsafe { *event.peer }.connectID,
                         unsafe { *event.packet }.dataLength
                     );
+                    unsafe { enet_packet_destroy(event.packet) };
                 }
                 _ENetEventType_ENET_EVENT_TYPE_NONE => {}
                 _ => unreachable!(),
